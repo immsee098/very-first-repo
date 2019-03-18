@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>회원가입창</title>
+
+<style>
+.fsize{
+font-size: 10px;
+
+}
+
+</style>
+
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
+</head>
+
+<body>
+
+<form action="#" method="post" id="join_form">
+        <input type="text" name="id" placeholder="아이디를 입력해주세요" id="id">
+        <p id="blank1" class="fsize"></p>
+        <input type="password" name="psw" placeholder="비밀번호를 입력해주세요" id="psw">
+        <p id="blank2" class="fsize"></p>
+        <input type="text" name="name" placeholder="이름을 입력해주세요" id="name">
+        <p id="blank3" class="fsize"></p>
+        <input type="text" name="postal" placeholder="우편번호입니다" id="postal" readonly>
+        <input type="text" name="address" placeholder="도로명주소" id="address" readonly>
+        <input type="text" name="address2" placeholder="상세 주소 입력" id="address2">
+        <input type="button" name="adbtn" value="도로명주소 찾기" id="adbtn">
+        <input type="button" name="submit" value="입력" id="submit">
+</form>
+
+
+<script>
+ $("#adbtn").click(function(){
+        new daum.Postcode({
+        oncomplete: function(data) {
+                $('input[name=postal]').val(data.zonecode);
+                $('input[name=address]').val(data.address);
+		$('input[name=address2]').val(data.buildingName);
+        }
+    }).open();
+
+
+ });
+
+
+
+
+ $("#submit").click(function(){
+        var a = $('input[name=id]').val();
+        var b = $('input[name=psw]').val();
+        var c = $('input[name=name]').val();
+         var d = $('input[name=postal]').val();
+         var e = $('input[name=address]').val();
+         var f = $('input[name=address2]').val();
+
+         sum = ""
+
+
+{         //정규표현식 시작
+
+        if (/^[a-zA-Z0-9]{5,19}$/g.test(a) == false)
+
+        {
+
+                document.getElementById('blank1').innerHTML="아이디는 영문과 숫자로만 입력하세요.";
+
+        }
+
+        if (/^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,}/g.test(b) == false)
+
+        {
+
+                document.getElementById('blank2').innerHTML="비밀번호는 영문, 숫자, 특수문자를 전부 사용하여 8자 이상이어야 합니다.";
+        
+
+        }
+        
+        if (/^[가-힣]{2,5}$/g.test(c) == false) 
+        {
+                
+                document.getElementById('blank3').innerHTML="이름은 2~5글자의 한글로 입력해주세요.";
+
+        }
+        
+
+
+
+
+
+
+} //여기까지 정규표현식으로 표현
+
+
+
+
+         if ($('input[name=id]').val()=="")
+         { 
+                 sum = sum+ "아이디"}
+
+
+        if ($('input[name=psw]').val()=="")
+         {
+                sum = sum+"  패스워드"}
+
+        if ($('input[name=name]').val()=="")
+         {
+                sum =sum+ "  이름"}
+
+        if ($('input[name=postal]').val()=="")
+         {
+                sum = sum+"  우편번호"}
+
+        if ($('input[name=address]').val()=="")
+         {
+                sum = sum+"  주소1"}
+
+        if ($('input[name=address2]').val()=="")
+         {
+                sum = sum+"  주소2"}
+        
+
+        if(sum==""){
+         alert("아이디는 : "+ a +"\n" 
+         +"비밀번호는 : "+ b +"\n"
+         +"이름은 : "+ c +"\n"
+         +"우편번호는 : "+ d +"\n"
+         +"주소1은 : "+ e +"\n"
+         +"주소2는 : "+ f +"\n")}
+
+         else{
+
+                alert(sum+'를 입력해주세요');
+         }
+
+ });
+
+</script>
+
+
+</body>
+
+</html>
+
+
+      <!-- if ($('input[name=id]').val()=="")
+         {
+        alert("아이디를 입력해주세요")}
+
+        if ($('input[name=psw]').val()=="")
+         {
+        alert("패스워드를 입력해주세요")}
+
+        if ($('input[name=name]').val()=="")
+         {
+        alert("이름을 입력해주세요")}
+
+        if ($('input[name=postal]').val()=="")
+         {
+        alert("우편번호를 입력해주세요")}
+
+        if ($('input[name=address]').val()=="")
+         {
+        alert("주소를 입력해주세요")}
+
+        if ($('input[name=address2]').val()=="")
+         {
+        alert("주소2를 입력해주세요")} --> 
