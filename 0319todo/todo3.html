@@ -32,21 +32,14 @@ ul {
 // }
 
 function saveTodo(){
-var data = {};
-var contentData = $('.qwerty').text();
-contentData = contentData.slice(0, contentData.length-5)
-console.log(contentData)
-var contentData2 = $('.qwerty');
-console.log(contentData2)
-// for (index=0; index < contentData2.length; index++){
-//     console.log(index)
-//     data[index] = contentData;
-// }
-contentData2.each(function(index){
-    data[index] = contentData;
-})
-console.log(data)
-localStorage.setItem('todos', JSON.stringify(data))
+    var data = {};
+    $('.qwerty').each(function(index) {
+        console.log($(this).text());
+        data[index] = $(this).text();
+    });
+    
+    console.log(data)
+    localStorage.setItem('todos', JSON.stringify(data))
  
 };
 

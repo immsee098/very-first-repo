@@ -1,0 +1,408 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<title>이마트몰</title>
+
+<head>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<style>
+.center{
+width: 150px;
+}
+
+</style>
+
+<body>
+
+<!--상단 파란줄-->
+<nav class="navbar navbar-light topnav" style="background-color: #7DE3FF; height:80px">
+    <a class="topnav" id="topX" href="#" style="text-decoration:none; font-size:30px">X</a>
+</nav>
+
+<!--상단 하얀 검색창-->
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <form class="form-inline my-2 my-lg-0" style="position:relative; left:35%">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+</div>
+
+<!--상단의노란탭-->
+
+<ul class="nav-tabs nav" id="myTab" role="tablist" style="position:relative; left:20%">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true" style="background-color:red">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="contact2-tab" data-toggle="tab" href="#contact2" role="tab" aria-controls="contact2" aria-selected="false">Contact</a>
+          </li>
+      <li class="nav-item">
+          <a class="nav-link" id="contact3-tab" data-toggle="tab" href="#contact3" role="tab" aria-controls="contact3" aria-selected="false">Contact</a>
+        </li>
+    </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" style="background-color:red">1</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">2</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">3</div>
+        <div class="tab-pane fade" id="contact2" role="tabpanel" aria-labelledby="contact2-tab">4</div>
+        <div class="tab-pane fade" id="contact3" role="tabpanel" aria-labelledby="contact3-tab">5</div>
+      </div>
+
+
+<!--검은색 메뉴창-->
+<nav class="navbar navbar-dark bg-dark">
+    <ul class="nav" style="position: relative; left:50%; transform:translate(-50%, 0%); font-size: 14px">
+        <li class="nav-item dropdown" style="background-color:black">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" tabindex="-1">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Disabled</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">Disabled</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Disabled</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Disabled</a>
+            </li>
+
+          <li class="nav-item">
+              <a class="nav-link" href="#">Disabled</a>
+          </li>
+        <li class="nav-item dropdown" style="background-color:black">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" tabindex="-1">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+          </li>
+      </ul>
+  </nav>
+
+  <br>
+
+<!--아래 상품창 이미지-->
+
+
+
+<div class="container" style="padding-right: 100px; padding-left: 100px; width: 100%;">
+    <div class="card" style="width: 50%; display: inline-block; float: left;">
+
+              <img src="0b1.png" class="card-img-top" alt="소고기무국" id="orimag">
+
+        <div class="card-colums" style="padding: 5%; padding-left: 20%">
+            <div class="card-group" style="width:80%">
+                <div class="card" id="card1">
+                  <img src="0b1.png" class="card-img-top" alt="...">
+                  </div>
+                <div class="card" id="card2">
+                  <img src="0b2.png" class="card-img-top" alt="...">
+                  </div>
+                <div class="card" id="card3">
+                  <img src="0b3.png" class="card-img-top" alt="...">
+                </div>
+              </div>
+        </div>
+      </div>
+
+<div style="padding-right: -5px; position: relative; left: 20px">
+<p class="box" style="float: right; width: 50%; height: 40px; border: 1px solid yellow; background-color: yellow; display: inline-block;">어쩌고</p>
+<span class="badge badge-warning" style="clear: both;">이마트몰</span>
+<p style="font-size: 20px"><b>[피코크]서울요리원 진한 소고기 미역국 500g</b></p>
+<p style="font-size: 20px">원산지: 상세설명참조</p>
+<p style="font-size: 30px"><b>3,480</b>원</p>
+</div>
+
+<hr>
+<p style="font-size: 12px; position: relative; left: 19px;">카드혜택가        3202원</p>
+<hr>
+<p style="font-size: 12px; position: relative; left: 19px;">카드혜택</p>
+<hr>
+<p style="font-size: 12px; position: relative; left: 19px;">배송정보</p>
+<br>
+<br>
+<div class="box" style="float: right; width: 50%; height: 80px; border: 1px solid gray; background-color:#FAFAFA; display: inline-block;display: inline-block; padding-right: -5px; position: relative; left: 20px"> 
+
+      <div class="center">
+          <div class="input-group">
+              <span class="input-group-btn">
+                  <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[2]" id="minusbtn">
+                    <span class="glyphicon glyphicon-minus"></span>
+                  </button>
+              </span>
+              <input type="text" name="quant[2]" class="form-control input-number" value="1" min="1" max="100" id="numval">
+              <span class="input-group-btn">
+                  <button type="button" class="btn btn-success btn-number" data-type="plus" data-field="quant[2]" id="plusbtn">
+                      <span class="glyphicon glyphicon-plus"></span>
+                  </button>
+              </span>
+          </div>
+      <p></p>
+    </div>
+
+    <script>
+        
+        function calcu(){
+          var quan = document.getElementById("numval").value
+          var b = 3480 * parseInt(quan);
+          console.log(b);
+        }
+    </script>
+
+    <h5 id="result"></h5>
+  </div>
+
+  <script>
+ document.getElementById('result').innerHTML=calcu()+"원입니다.";
+  </script>
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<script>
+$("#plusbtn").click(function(e){
+  e.preventDefault
+  calcu()
+});
+
+$("#minusbtn").click(function(e){
+  e.preventDefault
+  calcu()
+});
+</script>
+
+<br>
+
+
+<!--버튼부분-->
+<div class="btn-group btn-group-toggle" data-toggle="buttons" style="display: inline-block; position: relative; left:20px; top:15px">
+    <label class="btn btn-secondary active" style="width:180px; height:60px;">
+      <input type="radio" name="options" id="option1" autocomplete="off"> 장바구니
+    </label>
+    <label class="btn btn-secondary" style="width:180px; height:60px; text-align: center; background-color: orange">
+      <input type="radio" name="options" id="option3" autocomplete="off">  바로구매
+    </label>
+  </div>
+
+
+
+  <!--카드 부분-->
+  <br><br>
+  <br>
+  <br>
+
+  <div class="container">
+      <h3><b>카테고리 인기 상품</b></h3>
+      <hr>
+      <br>
+    </div>
+<div class="card-group" style="display:inline-flex">
+    <div class="card">
+      <img src="0c1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+      </div>
+    </div>
+    <div class="card">
+      <img src="0c1.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+      </div>
+    </div>
+    <div class="card">
+        <img src="0c1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+        </div>
+      </div>
+      <div class="card">
+        <img src="0c1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+        </div>
+      </div>
+      <div class="card">
+          <img src="0c1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+          </div>
+        </div>
+        <div class="card">
+          <img src="0c1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+          </div>
+        </div>
+        <div class="card">
+            <img src="0c1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+            </div>
+          </div>
+          <div class="card">
+              <img src="0c1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><small>[피코크]서울요리원 ~~국 500g</small></h5>
+              </div>
+            </div>
+  </div>
+
+</div>
+
+
+<!--컨테이너2-->
+
+<div class="container" style="padding-right: 100px; padding-left: 100px; width: 100%;">
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">Sticky top</a>
+        </div>
+      </nav>
+      <img src="0c3.png"></img>
+</div>
+
+
+<!--작은 상품 변경 클릭-->  
+<script>
+
+    $("#card1").click(function(){
+      $("#orimag").attr('src',"0b1.png");
+    });
+  
+    $("#card2").click(function(){
+      $("#orimag").attr('src',"0b2.png");
+    });
+  
+    $("#card3").click(function(){
+      $("#orimag").attr('src',"0b3.png");
+    });
+  
+  
+  </script>
+
+<script>
+
+//상단 파란 배너창지우기
+$("#topX").click(function(){
+ $(".topnav").hide()
+});
+</script>
+
+<script>
+$('.btn-number').click(function(e){
+    e.preventDefault();
+    
+    fieldName = $(this).attr('data-field');
+    type      = $(this).attr('data-type');
+    var input = $("input[name='"+fieldName+"']");
+    var currentVal = parseInt(input.val());
+    if (!isNaN(currentVal)) {
+        if(type == 'minus') {
+            
+            if(currentVal > input.attr('min')) {
+                input.val(currentVal - 1).change();
+            } 
+            if(parseInt(input.val()) == input.attr('min')) {
+                $(this).attr('disabled', true);
+            }
+
+        } else if(type == 'plus') {
+
+            if(currentVal < input.attr('max')) {
+                input.val(currentVal + 1).change();
+            }
+            if(parseInt(input.val()) == input.attr('max')) {
+                $(this).attr('disabled', true);
+            }
+
+        }
+    } else {
+        input.val(0);
+    }
+});
+$('.input-number').focusin(function(){
+   $(this).data('oldValue', $(this).val());
+});
+$('.input-number').change(function() {
+    
+    minValue =  parseInt($(this).attr('min'));
+    maxValue =  parseInt($(this).attr('max'));
+    valueCurrent = parseInt($(this).val());
+    
+    name = $(this).attr('name');
+    if(valueCurrent >= minValue) {
+        $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the minimum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    if(valueCurrent <= maxValue) {
+        $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+    } else {
+        alert('Sorry, the maximum value was reached');
+        $(this).val($(this).data('oldValue'));
+    }
+    
+    
+});
+$(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+  </script>
+
+</body>
+
+
+</html>
