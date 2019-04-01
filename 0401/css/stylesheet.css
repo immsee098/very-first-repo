@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url("./normalize.css");
+
+*, *::before, *::after{
+    box-sizing: border-box;
+
+}
+
+/* float 이슈를 해결하기 위한 css 모듈 */
+
+.clearfix::after{
+    content: "";
+    background: yellow;
+    display: block;
+    clear: both;
+}
+
+.container{
+    background: silver;
+
+}
+
+.header, .visual, .main, .slogan, .footer{
+    width:940px;
+    margin: 0 auto;
+}
+
+.header{
+    background: yellow;
+    height: 10vh;
+}
+
+.visual{
+    background: orange;
+    height: 120px;
+}
+
+.main{
+    background: lime;
+ 
+    padding: 30px 15px;
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+
+.group{
+    float: left;
+    height: 30vh;
+    margin: 15px;
+}
+
+.group1{
+    background: skyblue;
+    /* float: left; */
+    /* height: 70px; */
+    width: 250px;
+}
+
+.group2{
+    background:pink ;
+    /* height: 50px; */
+    float: left;
+    width: 380px;
+}
+
+.group3{
+    background: teal ;
+    /* height: 100px; */
+    /* float: left; */
+    width:180px
+}
+
+.slogan{
+    background: tomato;
+    height: 10vh;
+
+}
+
+.footer-bg{
+    background: purple;
+}
+
+.footer{
+    background: yellow;
+    height: 10vh;
+}
